@@ -5,9 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "dist": "build --tasks linux-x64 --mirror https://dl.nwjs.io/ .",
+    "start": "run --linux-x64 --mirror https://dl.nwjs.io/ .",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "build": {
+    "nwVersion": "0.50.3"
+  },
+  "main": "./public/index.html",
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
@@ -31,6 +37,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.12.0",
+    "nwjs-builder-phoenix": "^1.15.0",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "~2.0.9",
