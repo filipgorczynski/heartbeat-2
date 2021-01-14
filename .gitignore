@@ -1,7 +1,12 @@
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+node_modules/
+dist/
+
 .DS_Store
 node_modules
 /dist
-
 
 # local env files
 .env.local

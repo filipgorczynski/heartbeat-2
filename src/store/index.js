@@ -47,13 +47,20 @@ export default new Vuex.Store({
   mutations: {
     saveRemote: (state, data) => {
       const remote = { ...data };
+      if (remote.uri.startsWith('http://')) {
+        remote.uri = remote.uri.replace('http://', '');
+      }
       // prevent missing ID
-      const { id } = { ...this.$route.params };
-      if (id) {
-        // update existing
-      } else {
+      // const { id } = { ...this.$route.params };
+
+      if (typeof (remote.id) === 'undefined') {
         remote.id = Date.now();
         state.remotesList.unshift(remote);
+      } else {
+        const toUpdate = state.remotesList.find(({ id }) => id === remote.id);
+        toUpdate.alias = remote.alias;
+        toUpdate.uri = remote.uri;
+        toUpdate.interval = remote.interval;
       }
     },
     deleteRemote: (state, id) => {

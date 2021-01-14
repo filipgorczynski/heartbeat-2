@@ -11,9 +11,11 @@
     </div>
     <v-main>
       <v-container fluid class="pa-0">
-        <v-layout column>
-          <router-view></router-view>
-        </v-layout>
+        <v-slide-y-transition mode="out-in">
+          <!-- <v-layout column> -->
+            <router-view></router-view>
+          <!-- </v-layout> -->
+        </v-slide-y-transition>
       </v-container>
     </v-main>
 

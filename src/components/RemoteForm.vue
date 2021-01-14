@@ -16,7 +16,8 @@
             prepend-icon="mdi-cloud"
             label="URI"
             prefix="http://"
-            v-model="remote.uri"
+            :value="remote.uri|hideProtocol"
+            @input="val => remote.uri = val"
           >
           </v-text-field>
           <v-text-field
@@ -70,8 +71,12 @@ export default {
     },
     save() {
       this.$store.commit('saveRemote', this.remote);
-      this.$router.push({ path: '/' });
+      this.$router.push({ name: 'Home' });
     },
+  },
+
+  filters: {
+    hideProtocol: (value) => value.replace('http://', ''),
   },
 
 };
