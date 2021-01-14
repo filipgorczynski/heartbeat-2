@@ -1,4 +1,4 @@
-# heartbeat
+# Heartbeat 2
 
 ## Project setup
 ```
