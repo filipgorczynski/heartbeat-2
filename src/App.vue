@@ -30,31 +30,22 @@
 </template>
 
 <script>
-// import HBRemotesList from './components/RemotesList.vue';
-// const Monitor = require('ping-monitor');
+const Monitor = require('ping-monitor');
 
 export default {
   name: 'App',
 
-  // components: {
-  //   'hb-remotes-list': HBRemotesList,
-  // },
-
-  data: () => ({
-    //
-  }),
-
   created() {
-    // const myMonitor = new Monitor({
-    //   website: 'http://localhost',
-    //   port: 8080,
-    //   title: 'Raging Flame',
-    //   interval: 5,
-    // });
+    const myMonitor = new Monitor({
+      website: 'http://localhost:8081/',
+      port: 8081,
+      interval: 1,
+    });
+    console.log({ myMonitor });
 
-    // myMonitor.on('up', (res) => {
-    //   console.log('Yes!!', JSON.stringify(res));
-    // });
+    myMonitor.on('up', (response) => {
+      console.log('Yes!!', JSON.stringify(response));
+    });
   },
 
   methods: {
