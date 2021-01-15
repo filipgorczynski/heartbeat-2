@@ -31,6 +31,7 @@
 
 <script>
 // import HBRemotesList from './components/RemotesList.vue';
+// const Monitor = require('ping-monitor');
 
 export default {
   name: 'App',
@@ -42,6 +43,19 @@ export default {
   data: () => ({
     //
   }),
+
+  created() {
+    // const myMonitor = new Monitor({
+    //   website: 'http://localhost',
+    //   port: 8080,
+    //   title: 'Raging Flame',
+    //   interval: 5,
+    // });
+
+    // myMonitor.on('up', (res) => {
+    //   console.log('Yes!!', JSON.stringify(res));
+    // });
+  },
 
   methods: {
     add() {
