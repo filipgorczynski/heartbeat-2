@@ -30,21 +30,9 @@
 </template>
 
 <script>
-import Monitor from 'ping-monitor';
 
 export default {
   name: 'App',
-
-  created() {
-    const myMonitor = new Monitor({
-      website: 'http://localhost:8080/',
-      interval: 1,
-    });
-
-    myMonitor.on('up', (response) => {
-      console.log('Yes!!', JSON.stringify(response));
-    });
-  },
 
   methods: {
     add() {
