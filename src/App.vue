@@ -32,18 +32,9 @@
 </template>
 
 <script>
-// import HBRemotesList from './components/RemotesList.vue';
 
 export default {
   name: 'App',
-
-  // components: {
-  //   'hb-remotes-list': HBRemotesList,
-  // },
-
-  data: () => ({
-    //
-  }),
 
   methods: {
     add() {
