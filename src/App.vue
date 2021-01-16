@@ -30,18 +30,16 @@
 </template>
 
 <script>
-const Monitor = require('ping-monitor');
+import Monitor from 'ping-monitor';
 
 export default {
   name: 'App',
 
   created() {
     const myMonitor = new Monitor({
-      website: 'http://localhost:8081/',
-      port: 8081,
+      website: 'http://localhost:8080/',
       interval: 1,
     });
-    console.log({ myMonitor });
 
     myMonitor.on('up', (response) => {
       console.log('Yes!!', JSON.stringify(response));

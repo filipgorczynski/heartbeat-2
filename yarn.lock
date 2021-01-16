@@ -8048,10 +8048,10 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-ping-monitor@0.5.0:
-  version "0.5.0"
-  resolved "https://npm.unhaggle.com:443/ping-monitor/-/ping-monitor-0.5.0.tgz#251ae162a0d007438fb338c6a032a56cfadd6a46"
-  integrity sha512-TQOjuhe5XHQFgEnLnsoHMcDhU+hjxvtsUVHP74iVaAvdd/vkaYH0ivPk4GRD4agOnwq7kciUQBfoF9OiqH644A==
+ping-monitor@0.2.2:
+  version "0.2.2"
+  resolved "https://npm.unhaggle.com:443/ping-monitor/-/ping-monitor-0.2.2.tgz#a5ce118eb0e6605638da36791fb4f72579fb8c95"
+  integrity sha512-GcvsAGQqv4FnQMhUO0jIq/ByN0fLSYxkjeSOsLivRYVq1erdP2e39M1jdlZmMhxwXKnlOSWBT8/15POodjgjGQ==
 
 pinkie-promise@^2.0.0:
   version "2.0.1"
