@@ -47,9 +47,9 @@ export default new Vuex.Store({
   mutations: {
     saveRemote: (state, data) => {
       const remote = { ...data };
-      // if (remote.uri.startsWith('http://')) {
-      //   remote.uri = remote.uri.replace('http://', '');
-      // }
+      if (!remote.uri.startsWith('http://')) {
+        remote.uri = `http://${remote.uri}`;
+      }
       // prevent missing ID
       // const { id } = { ...this.$route.params };
 
@@ -57,6 +57,7 @@ export default new Vuex.Store({
         remote.id = Date.now();
         state.remotesList.unshift(remote);
       } else {
+        debugger;
         const toUpdate = state.remotesList.find(({ id }) => id === remote.id);
         toUpdate.alias = remote.alias;
         toUpdate.uri = remote.uri;
