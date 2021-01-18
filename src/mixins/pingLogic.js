@@ -2,7 +2,9 @@ import Monitor from 'ping-monitor';
 
 export default {
   created() {
-    this.createMonitor();
+    if (this.remote.monitoring) {
+      this.createMonitor();
+    }
   },
 
   destroyed() {

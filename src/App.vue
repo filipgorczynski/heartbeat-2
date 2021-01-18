@@ -12,9 +12,11 @@
     <v-main>
       <v-container fluid class="pa-0">
         <v-slide-y-transition mode="out-in">
+          <keep-alive include="HBRemotesList">
           <!-- <v-layout column> -->
             <router-view></router-view>
           <!-- </v-layout> -->
+          </keep-alive>
         </v-slide-y-transition>
       </v-container>
     </v-main>
